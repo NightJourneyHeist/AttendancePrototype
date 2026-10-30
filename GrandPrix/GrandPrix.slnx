@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Project Path="GrandPrix.Android/GrandPrix.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="GrandPrix.Browser/GrandPrix.Browser.csproj" />
+  <Project Path="GrandPrix.Desktop/GrandPrix.Desktop.csproj" />
+  <Project Path="GrandPrix.iOS/GrandPrix.iOS.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="GrandPrix/GrandPrix.csproj" />
+</Solution>
