@@ -11,8 +11,29 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainViewModel />
     </Design.DataContext>
+    <!--This is Temp UI-->
+    <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+        <!--greetings text-->
+        <TextBlock Text="{Binding Greeting}"
+                FontSize ="18"
+                HorizontalAlignment="Center"/>
+        
+        <!--displays current student id-->
+        <TextBlock Text="{Binding StudentId, Mode='TwoWay'}"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"/>
+
+        <!--allows the student to enter their ID, update it in code-->
+        <TextBox Text="{Binding StudentId, Mode='TwoWay'}"
+                    PlaceholderText="Enter Student ID"
+                    PlaceholderForeground="Gray" />
+        
+        <!--submits the Student ID-->
+        <Button Content="Submit"
+                Command="{Binding SubmitAttendanceCommand}"
+                HorizontalAlignment="Center"
+                Padding="10,5"/>
+
+    </StackPanel>
 </UserControl>
