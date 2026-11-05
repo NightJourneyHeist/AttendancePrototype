@@ -1,0 +1,7 @@
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\GrandPrix.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\GrandPrix.Server.AssemblyInfoInputs.cache
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\GrandPrix.Server.AssemblyInfo.cs
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\GrandPrix.Server.csproj.CoreCompileInputs.cache
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\GrandPrix.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mr.Monster\AttendanceDatbase\TestApp\AttendancePrototype\GrandPrix\GrandPrix.Server\obj\Debug\net10.0\GrandPrix.Server.sourcelink.json
