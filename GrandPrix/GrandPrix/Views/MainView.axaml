@@ -35,5 +35,11 @@
                 HorizontalAlignment="Center"
                 Padding="10,5"/>
 
+        <!--checks if a studnet already exists-->
+        <Button Content="Check"
+                Command="{Binding CheckAttendanceCommand}"
+                HorizontalAlignment="Center"
+                Padding="10,5"/>
+
     </StackPanel>
 </UserControl>

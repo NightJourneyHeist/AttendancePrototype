@@ -16,6 +16,33 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty]
     public partial string StudentId {get; set;} = "";
 
+    // This is a GET request, from phone -> router -> bailey -> laptop
+    [RelayCommand]
+    private async Task CheckAttendanceAsync()
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(StudentId))
+            {
+                Greeting = "Please enter your ID";
+                return;
+            }
+            string baileyIp = "192.168.1.100";
+            string url = $"http://{baileyIp}/attendance?studentId={StudentId}";
+
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+            Greeting = result;
+        }
+        catch (Exception ex)
+        {
+            Greeting = $"Check failed: {ex.Message}";
+        }
+    }
+
+    // This is a POST request, from the phone -> router -> bailey -> laptop
     [RelayCommand]
     private async Task SubmitAttendanceAsync()
     {
@@ -29,9 +56,9 @@ public partial class MainViewModel : ViewModelBase
         try 
         {
             // set up the destination (this is from phone POV)
-            string serverIp = "192.168.1.100";
-            string port = "5134";
-            string url = $"http://{serverIp}:{port}/attendance";
+            string baileyIp = "192.168.1.100";
+            
+            string url = $"http://{baileyIp}/attendance";
 
             // preapre paylod
             var payload = new {StudentId = StudentId};
@@ -39,7 +66,8 @@ public partial class MainViewModel : ViewModelBase
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             
             // yeet it!
-            HttpResponseMessage response = await _httpClient.PostAsync(url, content);
+            HttpResponseMessage response = await _httpClient.PostAsync(url, content);        
+            
             if (response.IsSuccessStatusCode)
             {
                 Greeting = $"Nice to see you,{StudentId}!";
