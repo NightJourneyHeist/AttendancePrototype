@@ -1,6 +1,11 @@
-
-StudentID: TEST123
-StudentID: Esraa
+aaa
+aaA
+aAa
+aAA
+Aaa
+AaA
+AAa
+AAA
 StudentID: logic
 StudentID: 001234
 StudentID: Joy
